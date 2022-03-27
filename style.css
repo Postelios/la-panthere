@@ -1144,3 +1144,17 @@ footer{
     display: flex;
     align-items: center;
 }
+
+.ajust{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+}
+
+.logo-svg{
+    background-color: white;
+    border-radius: 45px;
+    width: 100px;
+    justify-content: center;
+    display: flex;
+}
