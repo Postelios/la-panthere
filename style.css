@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Merienda;
+    src: url(fonts/Merienda-Regular.ttf);
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -90,17 +96,9 @@ a:hover {
     right: 0;
 }
 
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
-}
 
 .b-parallax {
     background-attachment: fixed;
-}
-
-.d-bloc {
-    color: rgba(255, 255, 255, .7);
 }
 
 .d-bloc button:hover {
@@ -133,7 +131,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: black;
 }
 
 .d-bloc .a-btn:hover,
@@ -287,6 +285,16 @@ a:hover {
     font-size: 32px;
 }
 
+#bloc-1-hero {
+    height: 320px;
+}
+
+@media screen and (min-width: 768px) {
+    #bloc-1-hero {
+        height: 380px;
+    }
+}
+
 .navbar {
     margin-bottom: 0;
     z-index: 1;
@@ -299,16 +307,14 @@ a:hover {
     font-weight: normal;
     font-weight: 600;
     line-height: 44px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .navbar-brand img {
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
-}
-
-.navbar-brand img[src$=svg] {
-    min-width: 100px;
 }
 
 .nav-center .navbar-brand img {
@@ -362,7 +368,7 @@ a:hover {
     z-index: 2;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .site-navigation {
         position: absolute;
         top: 50%;
@@ -651,7 +657,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: black!important;
 }
 
 .container {
@@ -736,11 +742,16 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color: black!important;
+}
+
+.txt_middle{
+    color: white!important;
 }
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    width: 100%;
 }
 
 .portfolio-row {
@@ -753,8 +764,9 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 40px 40px 40px 40px;
+    height: 380px;
 }
 
 .bold-link {
@@ -775,12 +787,16 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: white!important;
+}
+
+.tc-black{
+    color: black!important;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: black!important;
 }
 
 .btn-atomic-tangerine:hover {
@@ -813,10 +829,6 @@ h4 {
     background-image: url("img/dots-bg.png");
 }
 
-.bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
-}
-
 .bg-banniere {
     background-image: url("img/agence-la-panthere.jpg");
 }
@@ -825,7 +837,7 @@ h4 {
     background-image: url("img/image-de-presentation.bmp");
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
         padding-right: 20px;
@@ -839,7 +851,7 @@ h4 {
     }
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
+@media only screen and (max-width: 992px) and (min-width: 768px) {
     .navbar .nav {
         max-width: 80%
     }
@@ -848,19 +860,19 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .container {
         width: 100%;
     }
@@ -872,10 +884,7 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
+
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -884,12 +893,10 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .page-container {
         overflow-x: hidden;
         position: relative;
@@ -1028,15 +1035,112 @@ h4 {
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .bloc {
         padding-left: 0;
         padding-right: 0;
     }
 }
 
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
     }
+}
+
+
+.nav{
+    display: flex;
+    padding: 0px;
+    border: none !important;
+    line-height: unset;
+}
+
+.nav p{
+    margin:0px;
+}
+
+.logo_txt{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.navbar-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 768px) {
+    ul{
+    display: flex;
+    flex-direction: column;
+}
+}
+
+ul{
+    margin-right: 30px;
+}
+
+.nav_img img{
+    min-height: 40px;
+    max-height: 40px;
+    padding: 0 0 0 20px;
+}
+
+.txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.txt p{
+    width: max-content;
+    margin: 0px;
+}
+p.nav_logo{
+    font-family: Merienda !important;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px !important;
+    font-weight: 500;
+    line-height: 1;
+}
+
+p.nav_aw{
+    font-size: 8px;
+    padding: 0px !important;
+    line-height: 0px;
+}
+
+.navbar-header{
+    display: flex;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: none
+}
+
+
+
+.soulign {
+    text-decoration: underline;
+}
+
+.centrer{
+    align-items: center;
+    display: flex;
+}
+
+@media screen and (min-width: 768px){
+footer{
+    height: 100px;
+}
+}
+
+#bloc-3-what-i-do{
+    height: 470px;
+    display: flex;
+    align-items: center;
 }
